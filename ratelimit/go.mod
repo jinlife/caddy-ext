@@ -1,4 +1,4 @@
-module github.com/RussellLuo/caddy-ext/ratelimit
+module github.com/jinlife/caddy-ext/ratelimit
 
 go 1.14
 
