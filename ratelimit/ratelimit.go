@@ -268,6 +268,9 @@ func getClientIP(r *http.Request, forwarded bool) (netaddr.IP, error) {
 		if fwdFor := r.Header.Get("X-Forwarded-For"); fwdFor != "" {
 			remote = strings.TrimSpace(strings.Split(fwdFor, ",")[0])
 		}
+		if fwdCF := r.Header.Get("CF-Connecting-IP"); fwdCF != "" {
+			remote = strings.TrimSpace(strings.Split(fwdCF, ",")[0])
+		}
 	}
 	ipStr, _, err := net.SplitHostPort(remote)
 	if err != nil {
