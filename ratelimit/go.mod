@@ -7,5 +7,4 @@ require (
 	github.com/caddyserver/caddy/v2 v2.4.5
 	github.com/hashicorp/golang-lru v0.5.1
 	go.uber.org/zap v1.19.0
-	inet.af/netaddr v0.0.0-20211027220019-c74959edd3b6
 )
